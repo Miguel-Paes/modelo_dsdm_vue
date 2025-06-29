@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+  import { ref } from 'vue'
+
+  import FirstStep from '@/components/FirstStep.vue'
+  import SecondStep from '@/components/SecondStep.vue'
+
+  const tab = ref('step_one')
+</script>
 
 <template>
   <v-app-bar class="d-flex flex-column text-center" color="brown-darken-1">
@@ -28,11 +35,42 @@
 
   <v-card class="rounded-xl pa-3 mx-16" color="white">
     <v-card class="pa-3 rounded-xl" color="grey-lighten-5">
-      <div class="rounded-xl">
-        <v-card-title class="bg-brown-darken-4 rounded-t-xl">Etapa 1: Análise de Viabilidade</v-card-title>
-        <v-card-text class="d-flex pt-3 bg-brown-lighten-5 border-colored">Define se é possível realizar o projeto com o prazo e orçamento oferecido</v-card-text>
-      </div>
-    </v-card>
+      <v-tabs
+        v-model="tab"
+        align-tabs="center"
+        bg-color="brown-darken-4"
+        class="rounded-pill"
+      >
+        <v-tab value="step_one">Análise de Viabilidade</v-tab>
+        <v-tab value="step_two">Análise de Negócio</v-tab>
+        <v-tab value="step_three">Iteração do Modelo Funcional</v-tab>
+        <v-tab value="step_four">Elaboração e Construção</v-tab>
+        <v-tab value="step_five">Desenvolvimento e Implementação</v-tab>
+      </v-tabs>
+
+      <v-card-text>
+        <v-tabs-window v-model="tab">
+          <v-tabs-window-item value="step_one">
+            <FirstStep />
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="step_two">
+            <SecondStep />
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="step_three">
+            Three
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="step_four">
+            Four
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="step_five">
+            Five
+          </v-tabs-window-item>
+        </v-tabs-window>
+      </v-card-text></v-card>
   </v-card>
 </template>
 
