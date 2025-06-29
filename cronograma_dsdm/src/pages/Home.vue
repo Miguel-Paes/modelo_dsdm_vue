@@ -3,6 +3,7 @@
 
   import FirstStep from '@/components/FirstStep.vue'
   import SecondStep from '@/components/SecondStep.vue'
+  import ThirdStep from '@/components/ThirdStep.vue'
 
   const tab = ref('step_one')
 </script>
@@ -59,7 +60,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="step_three">
-            Three
+            <ThirdStep />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="step_four">
