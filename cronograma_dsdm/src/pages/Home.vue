@@ -1,7 +1,9 @@
 <script setup>
   import { ref } from 'vue'
 
+  import FifthStep from '@/components/FifthStep.vue'
   import FirstStep from '@/components/FirstStep.vue'
+  import FourthStep from '@/components/FourthStep.vue'
   import SecondStep from '@/components/SecondStep.vue'
   import ThirdStep from '@/components/ThirdStep.vue'
 
@@ -9,11 +11,11 @@
 </script>
 
 <template>
-  <v-app-bar class="d-flex flex-column text-center" color="brown-darken-1">
-    <v-app-bar-title>Cronograma - 📙 Projeto da Biblioteca de Arcadia 📙</v-app-bar-title>
+  <v-app-bar class="d-flex flex-column text-center" color="teal-darken-1">
+    <v-app-bar-title>Cronograma - 🚑 Projeto da DrogaCara 🚑</v-app-bar-title>
   </v-app-bar>
 
-  <v-card class="bg-brown-lighten-1 mt-3 mx-16 d-flex" variant="tonal">
+  <v-card class="bg-teal-lighten-1 mt-3 mx-16 d-flex" variant="tonal">
     <v-row>
       <v-col class="text-center d-flex flex-column justify-center align-center" cols="4">
         <v-card-title class="w-33">8 Meses</v-card-title>
@@ -39,7 +41,7 @@
       <v-tabs
         v-model="tab"
         align-tabs="center"
-        bg-color="brown-darken-4"
+        bg-color="teal-darken-4"
         class="rounded-pill"
       >
         <v-tab value="step_one">Análise de Viabilidade</v-tab>
@@ -64,19 +66,19 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="step_four">
-            Four
+            <FourthStep />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="step_five">
-            Five
+            <FifthStep />
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text></v-card>
   </v-card>
 </template>
 
-<style scoped>
+<style>
   .border-colored {
-    border-left: solid .5rem #3E2723;
+    border-left: solid .5rem #004D40;
   }
 </style>

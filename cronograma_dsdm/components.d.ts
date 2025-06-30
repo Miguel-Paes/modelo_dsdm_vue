@@ -8,9 +8,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AppFooter: typeof import('./src/components/AppFooter.vue')['default']
+    FifthStep: typeof import('./src/components/FifthStep.vue')['default']
     FirstStep: typeof import('./src/components/FirstStep.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    FourthStep: typeof import('./src/components/FourthStep.vue')['default']
+    FouthStep: typeof import('./src/components/FouthStep.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SecondStep: typeof import('./src/components/SecondStep.vue')['default']
